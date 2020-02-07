@@ -1,0 +1,27 @@
+.box-orange {
+  width: 300px;
+  height: 300px;
+  float: left;
+  background-color: #ff9966;
+}
+
+.box-pink {
+  width: 300px;
+  height: 300px;
+  float: left;
+  background-color: #b3a;
+}
+
+.box-green {
+  width: 300px;
+  height: 300px;
+  float: left;
+  background-color: green;
+}
+
+.box-blue {
+  width: 300px;
+  height: 300px;
+  float: left;
+  background-color: rgb(63, 63, 199);
+}
