@@ -1,0 +1,28 @@
+@keyframes dashAnim {
+  to {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+    fill: steelblue;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 50%;
+  display: block;
+  margin: 100px auto;
+}
+
+.st0 {
+  fill: transparent;
+  stroke: #ff0099;
+  stroke-width: 4;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dashAnim 15s forwards;
+}
