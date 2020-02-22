@@ -1,0 +1,47 @@
+.my-container {
+  display: flex;
+  /* Direction Wrap */
+  flex-flow: row wrap;
+  /* flex-direction: row; */
+  /* flex-wrap: wrap; */
+  /* justify-content: flex-start; Default */
+  /* justify-content alinha os elementos na direção que você escolheu (Horizontal) */
+  justify-content: space-between;
+  /* align-items alinha os elementos no eixo contraio aa direção que você escolheu */
+  align-items: stretch;
+
+  /* align-content usado para alinhar o conteudo de vários itens dentro do container (Vertical)*/
+  align-content: center;
+
+  /* flex-grow utiliza o espaço vazio para crescer proporcionalmente */
+
+  /* flex-shrink utiliza o espaço execedente para encolher proporcionalmente */
+
+  /* align-self permite alterar um elemento em específico modificar seu alinhamento */
+
+  width: 80%;
+  height: 600px;
+  margin: 60px auto;
+  background-color: rgba(131, 58, 180, 1);
+  border-radius: 8px;
+}
+
+.my-item {
+  flex-basis: 25%;
+  background-color: #21f8bb;
+  border-radius: 8px;
+  padding: 30px;
+  border: 4px solid rebeccapurple;
+}
+
+.grow-1 {
+  flex-grow: 1;
+}
+
+.grow-2 {
+  flex-grow: 2;
+}
+
+.align {
+  align-self: stretch;
+}
