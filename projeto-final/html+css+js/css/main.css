@@ -2,6 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
 }
 
 @media screen and (min-width: 320px) {
@@ -39,6 +45,81 @@
 
   .jl-menu {
     display: none;
+  }
+
+  .jl-btn-contact {
+    width: 45px;
+    height: 45px;
+    display: block;
+    background: #2ccb69 url("../images/icon-contact-close.svg") no-repeat;
+    position: fixed;
+    bottom: 45px;
+    right: 45px;
+    border-radius: 50%;
+    z-index: 200;
+    transition: all 0.2s ease-out;
+  }
+
+  .jl-contact-info {
+    width: 245px;
+    height: 165px;
+    padding: 25px;
+    position: fixed;
+    display: none;
+    bottom: 115px;
+    z-index: 200;
+    right: 65px;
+  }
+
+  .jl-contact-info-inner {
+    display: table;
+    width: 100%;
+    float: right;
+  }
+
+  .jl-contact-info-inner p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .jl-social-links {
+    width: 100%;
+    height: 45px;
+    display: block;
+    margin-left: -12px;
+  }
+
+  .jl-social {
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+  }
+
+  .jl-social > img {
+    width: 20px;
+    height: auto;
+    display: block;
+    margin: 15px auto 0;
+  }
+
+  .jl-corner {
+    width: 25px;
+    height: 25px;
+    display: block;
+    float: right;
+    display: relative;
+  }
+
+  .jl-corner:after {
+    content: "";
+    width: 25px;
+    height: 25px;
+    display: block;
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    background-color: antiquewhite;
+    background: transparent url("../images/corner.svg") no-repeat;
   }
 }
 
@@ -92,23 +173,6 @@
   .jl-menu a:hover:before {
     transform: scale(1, 1);
   }
-
-  .jl-btn-contact {
-    width: 45px;
-    height: 45px;
-    display: block;
-    background: #2ccb69 url("../images/icon-contact-close.svg") no-repeat;
-    position: fixed;
-    bottom: 45px;
-    right: 45px;
-    border-radius: 50%;
-    z-index: 200;
-    transition: all 0.2s ease-out;
-  }
-
-  .jl-btn-contact:hover {
-    background-position-y: -45px;
-  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -118,4 +182,53 @@
 }
 
 @media screen and (min-width: 1600px) {
+}
+
+/* Classes Utilitárias */
+
+.jl-title {
+  font-family: "Abril Fatface", serif;
+  font-weight: normal;
+}
+
+.jl-text-green {
+  color: #2ccb69;
+}
+
+.jl-text-dark {
+  color: #4d4c4c;
+}
+
+.jl-text-light {
+  color: #bcbcbc;
+}
+
+.jl-text-black {
+  color: #000;
+}
+
+.jl-bg-green {
+  background: #2ccb69;
+}
+
+.jl-bg-dark {
+  background: #4d4c4c;
+}
+
+.jl-bg-light {
+  background: #bcbcbc;
+}
+
+.jl-bg-black {
+  background: #000;
+}
+
+/* Classes de comportamento */
+
+.jl-is-open {
+  display: block;
+}
+
+.jl-change-icon {
+  background-position-y: -45px;
 }
