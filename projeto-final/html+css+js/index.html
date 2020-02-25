@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bootstrap-grid.min.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans:400,400i,700,700i,800,800i&display=swap"
       rel="stylesheet"
@@ -11,6 +12,19 @@
     <title>João Lemon - UI/UX Designer</title>
   </head>
   <body>
+    <div class="jl-preloader">
+      <div class="jl-preloader-inner">
+        <img
+          src="./images/lemon-loader.svg"
+          alt="Preloader"
+          class="jl-mar-bottom-15"
+        />
+        <p class="jl-text-light jl-mar-top-15">
+          Aguarde um pouquinho... Estou preparando a limonada
+        </p>
+      </div>
+    </div>
+
     <header class="jl-topbar">
       <div class="jl-logo">
         <img src="./images/logo.svg" alt="Logo João Lemon UI/UX Designer" />
@@ -45,7 +59,26 @@
 
     <div class="jl-btn-contact"></div>
 
-    <div class="jl-page-wrapper"></div>
+    <div class="jl-page-wrapper">
+      <section class="jl-full-hight jl-first-section" id="jl-home-presentation">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-12 col-md-3 offset-md-2 jl-display-text ">
+              <h1 class="jl-title jl-title-big jl-text-green ">Olá!</h1>
+              <p class="jl-text-light">
+                Meu nome é <span>João Lemon</span>, sou designer de
+                <span class="jl-text-green"> UX e UI.</span> Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Non aspernatur assumenda
+                minima voluptatibus, nam dolorum, nihil culpa ab, reiciendis
+                neque similique illo ut minus architecto iure ullam unde
+                voluptatum soluta.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="jl-full-hight"></section>
+    </div>
     <script src="./js/main.js"></script>
   </body>
 </html>

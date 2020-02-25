@@ -1,8 +1,18 @@
+// Declarando váriaveis
 const btnContact = document.querySelector(".jl-btn-contact");
 
-btnContact.addEventListener("click", function() {
-  const boxContact = document.querySelector(".jl-contact-info");
-  boxContact.classList.toggle("jl-is-open");
+// Page preloader
+window.addEventListener("load", function() {
+  const pagePreloader = this.document.querySelector(".jl-preloader");
+  pagePreloader.classList.add("jl-fade-out");
+});
 
-  this.classList.toggle("jl-change-icon");
+// Abrir e fechar botão de contato
+window.addEventListener("load", function() {
+  var pagePreloder = document.querySelector(".jl-preloader");
+  pagePreloder.classList.add("jl-fade-out");
+
+  setTimeout(function() {
+    pagePreloder.style.display = "none";
+  }, 2000);
 });

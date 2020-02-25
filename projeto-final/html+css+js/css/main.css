@@ -6,17 +6,36 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
 p {
   font-family: "Open Sans", sans-serif;
 }
 
 @media screen and (min-width: 320px) {
-  .jl-page-wrapper {
+  .jl-page-wrapper,
+  .jl-preloader {
     width: 100%;
     height: 100vh;
-    display: block;
+    display: table;
     background-color: #1c1c1c;
     border: 30px solid #000;
+  }
+
+  .jl-preloader {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
   }
 
   .jl-topbar {
@@ -57,6 +76,8 @@ p {
     right: 45px;
     border-radius: 50%;
     z-index: 200;
+    border: none;
+    cursor: pointer;
     transition: all 0.2s ease-out;
   }
 
@@ -120,6 +141,18 @@ p {
     right: 0;
     background-color: antiquewhite;
     background: transparent url("../images/corner.svg") no-repeat;
+  }
+
+  /* Home */
+
+  .jl-display-text {
+    margin-top: 10%;
+  }
+
+  #jl-home-presentation {
+    background-image: url("../images/joao-lemon-designer-home.png");
+    background-repeat: no-repeat;
+    background-position: 50% bottom;
   }
 }
 
@@ -191,6 +224,10 @@ p {
   font-weight: normal;
 }
 
+.jl-title-big {
+  font-size: 120px;
+}
+
 .jl-text-green {
   color: #2ccb69;
 }
@@ -223,6 +260,49 @@ p {
   background: #000;
 }
 
+/* Classe utilitárias de margin e padding */
+
+.jl-mar-15 {
+  margin: 15px;
+}
+.jl-mar-top-15 {
+  margin-top: 15px;
+}
+.jl-mar-right-15 {
+  margin-right: 15px;
+}
+.jl-mar-bottom-15 {
+  margin-bottom: 15px;
+}
+.jl-mar-left-15 {
+  margin-left: 15px;
+}
+
+.jl-pad-15 {
+  padding: 15px;
+}
+.jl-pad-top-15 {
+  padding-top: 15px;
+}
+.jl-pad-right-15 {
+  padding-right: 15px;
+}
+.jl-pad-bottom-15 {
+  padding-bottom: 15px;
+}
+.jl-pad-left-15 {
+  padding-left: 15px;
+}
+
+.jl-full-hight {
+  height: 100vh;
+  border-bottom: 5px solid #2ccb69;
+}
+
+.jl-first-section {
+  height: calc(100vh - 30px);
+}
+
 /* Classes de comportamento */
 
 .jl-is-open {
@@ -231,4 +311,8 @@ p {
 
 .jl-change-icon {
   background-position-y: -45px;
+}
+
+.jl-fade-out {
+  animation: fadeOut 2s forwards ease-out;
 }
